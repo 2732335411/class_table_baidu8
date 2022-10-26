@@ -1,0 +1,82 @@
+
+.box{
+    background: rgb(6, 132, 163);
+    color: white;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+}
+.search_button{
+    width: 100%;
+    height: 50px;
+    border:0;
+    background: rgb(6,132, 163);
+    color: white;
+    transition: all 0.6;
+}
+select{
+    margin:10px 0;
+}
+option{
+    padding: 20px;
+}
+.box p{
+    line-height: 11px;
+}
+.max-box{
+    padding:20px;
+}
+.fix_button{
+    position: fixed;
+    right:5px;
+    bottom: 10%;
+    
+
+    
+}
+.xiaoli_button, .up_classTime_button{
+    width: 20px;
+    height: auto !important;
+    font-size:14px;
+    border:0;
+    color: white;
+    background: rgb(6,132, 163);
+    box-shadow: 0 0 10px black;
+    transition: all 0.6;
+}
+.xiaoli{
+    width:100vw;
+    height:100vh;
+    position: fixed;
+    top: 0;
+    
+    background: rgba(0, 0, 0, 0.507);
+    transition: all 0.3s;
+    
+}
+
+
+.tie_box img{
+    width: 100vw;
+    height: 100vh
+
+
+}
+.up_classTime{
+    width:100vw;
+    height:100vh;
+    position: fixed;
+    top: 0;
+    
+    background: rgba(0, 0, 0, 0.507);
+    transition: all 0.3s;
+}
+.up_classTime img{
+    width: 100vw;
+    height: 100vh
+}
+button:active{
+    background: rgb(4, 92, 114);
+
+
+}

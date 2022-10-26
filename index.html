@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汤姆猫查课系统</title>
+    <script src="./vue.js"></script>
+    <script src="./mydata_get.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="root">
+        <div  class="max-box">
+        
+            <span>教学周</span>
+            <select name="" id="" style="width: 100%; height: 40px" @change="sel_change($event)">
+                <selected label="教学周">教学周</selected>
+                <optgroup label="教学周选择">请选择教学周</optgroup> 
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+            </select>
+            <span>星期</span>
+            <select name="" id="" style="width: 100%; height:40px;" @change="sel_two_change($event)">
+                <option value="1">星期一</option>
+                <option value="2">星期二</option>
+                <option value="3">星期三</option>
+                <option value="4">星期四</option>
+                <option value="5">星期五</option>
+                <option value="6">星期六</option>
+                <option value="7">星期日</option>
+            </select>
+            <br>  <button @click="get_data" class="search_button">查询</button>
+            <p style="color: #737373; font-size:14px">只导入了10-12月的课程。我会更新，终于不用看眼花缭乱的课表了。如有异常，请以群内通知的课程为准，我怕出bug</p>
+            <h3 v-if="this.class">当日无课程，如存疑问 可自查课表</h3>
+            <div v-for=" i of table" class="box">
+                <p>课程名：{{i['name']}}</p>
+                <p>教师：{{i['teacher']}}</p>
+                <p>上课时间：{{i['time']}}</p>
+                <p>上课地点：{{i['addr']}}</p>
+                <p>星期：{{i['XQJ']}}</p>
+                <p>教学周：{{i['JSZ']}}</p>
+                
+            </div>
+            
+        </div>
+        <div class="tie_box">
+            <div class="fix_button">
+                <button class="xiaoli_button" @click="xiaolifunc()" >校历表</button><br><br>
+                <button class="up_classTime_button" @click="up_class_time()">上课时间表</button>
+            </div>
+            <div class="xiaoli" :style="xl" @click="xl_off()">
+                <img src="./image/xiaoli.png" alt="">
+            </div>
+            <div class="up_classTime" :style="up" @click="up_off()">
+                <img src="./image/2.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+       const Vm=new Vue({
+            el: '#root',
+            data: {
+                table:[],
+                week: 0,
+                to_week: 1,
+                class: false,
+                xl: {
+                    right: '-100%'
+                },
+                up:{
+                    left: '-100%'
+                }
+            },
+            methods: {
+                get_data(){
+
+                    this.table=get_table(this.week,this.to_week);
+                    if(this.table.length==0){
+                        this.class=true;
+                    }else{
+                        this.class=false;
+                    }
+                    
+                },
+                sel_change(event){
+                    
+                    let a=function(){
+                       return Number(event.target.value)
+                    }
+                    this.week=a()
+            },  
+                sel_two_change(event){
+                    let a=function(){
+                       return Number(event.target.value)
+                    }
+                    this.to_week=a()
+                },
+                xiaolifunc(){
+                    this.xl.right='0'
+                },
+                up_class_time(){
+                    this.up.left='0'
+
+                },
+                xl_off(){
+                    this.xl.right='-100%'
+                },
+                up_off(){
+                    this.up.left='-100%'
+                }
+            },
+
+
+        })
+        
+    </script>
+</body>
+
+</html>
