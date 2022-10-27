@@ -49,9 +49,12 @@
                 <option value="7">星期日</option>
             </select>
             <br>  <button @click="get_data" class="search_button">查询</button>
-            <p style="color: #737373; font-size:14px">只导入了10-12月的课程。我会更新，终于不用看眼花缭乱的课表了。如有异常，请以群内通知的课程为准，我怕出bug</p>
-            <h3 v-if="this.class">当日无课程，如存疑问 可自查课表</h3>
+            <p style="color: #737373; font-size:14px">只导入了10-12月份的课程，如有调课，请及时查看我发在班级群的信息。课程更新时间：2022/10/26</p>
+
+            <h3 v-if="this.class">当日无课程，如存疑问 可自查课表为准 </h3>
+            <script type="text/javascript" src="http://yijuzhan.com/api/word.php?m=js"></script><script>document.write("<div>"+"每日古诗：");yiju(true);document.write("</div>");</script>
             <div v-for=" i of table" class="box">
+
                 <p>课程名：{{i['name']}}</p>
                 <p>教师：{{i['teacher']}}</p>
                 <p>上课时间：{{i['time']}}</p>
