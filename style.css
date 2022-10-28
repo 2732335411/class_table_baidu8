@@ -1,10 +1,11 @@
 
 .box{
-    background: rgb(6, 132, 163);
-    color: white;
+    background: rgb(255, 255, 255);
+    color: rgb(21, 21, 21);
     padding: 10px;
     margin: 20px;
     border-radius: 10px;
+    box-shadow: -1px 0px 6px 0px #00000030;
 }
 .search_button{
     width: 100%;
@@ -21,6 +22,7 @@ option{
     padding: 20px;
 }
 .box p{
+    
     line-height: 11px;
 }
 .max-box{
