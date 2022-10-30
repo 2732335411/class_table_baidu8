@@ -26,11 +26,11 @@ option{
     line-height: 11px;
 }
 .max-box{
-    padding:20px;
+    margin:20px;
 }
 .fix_button{
     position: fixed;
-    right:10px;
+    right:0px;
     bottom: 10%;
     
 
@@ -43,8 +43,9 @@ option{
     border:0;
     color: white;
     background: rgb(6,132, 163);
-    box-shadow: 0 0 10px black;
+    box-shadow: -1px 0px 6px 0px #000000d8;
     transition: all 0.6;
+    padding: 0;
 }
 .xiaoli{
     width:100vw;
@@ -84,4 +85,9 @@ button:active{
 }
 #inrishici-sentence{
     text-align: center;
+}
+select{
+    background: white;
+    border: 1px solid rgb(165 165 165);
+    outline: none;
 }
