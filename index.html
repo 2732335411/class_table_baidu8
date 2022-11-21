@@ -97,7 +97,7 @@
             el: '#root',
             data: {
                 table:[],
-                week: 0,
+                week: 13,
                 to_week: 1,
                 class: false,
                 xl: {
@@ -121,6 +121,7 @@
                 sel_change(event){
                     
                     let a=function(){
+                        
                        return Number(event.target.value)
                     }
                     this.week=a()

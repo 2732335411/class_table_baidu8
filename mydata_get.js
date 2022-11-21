@@ -3,13 +3,13 @@ classtable = {"result":[{"XQJ":6,"JSZ":10,"teacher":"徐小周","name":"大学�
 
 
 // 教务系统信息与课表有误 进行地址更改
-for(y of classtable['result']){
-    if(y['name']=='思想道德与法治'){
-        y.addr='教务系统未更新 暂不显示'
-        console.log(y);
-    }
-    
-}
+// for(y of classtable['result']){
+//     if(y['name']=='思想道德与法治'){
+//         y.addr='教务系统未更新 暂不显示'
+//         console.log(y);
+//     }
+
+// }
 
 //json数据有重 以下代码为检查是否存在
 let check = function (check_arr, check_arr2) {
@@ -80,5 +80,5 @@ let get_table = function (teaching_table, today_week) {
 }
 
 
-// console.log(get_table(10, 1));
+
 
