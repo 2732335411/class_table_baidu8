@@ -92,3 +92,14 @@ select{
     border: 1px solid rgb(165 165 165);
     outline: none;
 }
+.announcement{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30%;
+    width: 45vw;
+    height: 280px;
+    background: rgb(223, 223, 223);
+    border-radius: 20px;
+
+}
