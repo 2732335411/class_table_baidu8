@@ -7,6 +7,7 @@
     border-radius: 10px;
     box-shadow: -1px 0px 6px 0px #00000030;
     -webkit-box-shadow: -1px 0px 6px 0px #00000030;
+    -ms-box-shadow: -1px 0px 6px 0px #00000030;
 }
 .search_button{
     width: 100%;
